@@ -10,7 +10,7 @@ const TravelStoryRoute = require("./Routes/travelstory.route");
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: "*" }));
+app.use(cors({ origin: "https://travel-story-app-backend.onrender.com/" }));
 
 app.use("/auth", UserRoute);
 app.use("/story", TravelStoryRoute);
@@ -18,7 +18,7 @@ app.use("/story", TravelStoryRoute);
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/assets", express.static(path.join(__dirname, "assets")));
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 8000);
 console.log(`server is running on PORT: ${process.env.PORT}`);
 mongoose.connect(process.env.DB_LINK);
 console.log("DB connected successfully..");
