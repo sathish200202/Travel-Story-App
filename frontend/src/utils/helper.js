@@ -24,7 +24,7 @@ export const getInitails = (name) => {
 // };
 
 export const gotEmptyCardMessage = (filterType) => {
-  console.log("message: ", filterType);
+  //console.log("message: ", filterType);
   switch (filterType) {
     case "search":
       return "Oops! No stories found matching your search.";
