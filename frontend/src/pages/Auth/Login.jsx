@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import PasswordInput from "../../components/input/PasswordInput";
 import { validEmail } from "../../utils/helper";
 import axiosInstance from "../../utils/axiosInstance";
-import { red } from "@mui/material/colors";
+import login from "../../../public/images/login.webp";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -52,7 +52,7 @@ const Login = () => {
   };
 
   const loginImage = {
-    backgroundColor: "red",
+    backgroundImage: `url(${login})`,
   };
   return (
     <div className="h-screen bg-cyan-100 overflow-hidden relative">

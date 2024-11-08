@@ -11,8 +11,8 @@ export default {
         secondary: "EF863E",
       },
       backgroundImage: {
-        "login-bg-img": "url('./public/images/login.webp')",
-        "signup-bg-img": "url('./public/images/bg_image.png')",
+        // "login-bg-img": "url('./public/images/login.webp')",
+        // "signup-bg-img": "url('./public/images/bg_image.png')",
       },
     },
   },
