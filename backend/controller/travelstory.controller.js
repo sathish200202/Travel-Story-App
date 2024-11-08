@@ -64,7 +64,7 @@ const ImageUpload = async (req, res) => {
       return res.status(400).json({ message: "No image upload" });
     }
 
-    const imageUrl = `http://localhost:8000/uploads/${req.file.filename}`;
+    const imageUrl = `https://travel-story-app-backend-eitd.onrender.com/uploads/${req.file.filename}`;
     res.status(201).json({ imageUrl });
   } catch (error) {
     console.log("Error in upload image controller", error.message);
