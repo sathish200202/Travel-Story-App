@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const config = require("./config.json");
+// const config = require("./config.json");
 const mongoose = require("mongoose");
 require("dotenv").config();
 const path = require("path");
@@ -20,7 +20,7 @@ app.use("/assets", express.static(path.join(__dirname, "assets")));
 
 app.listen(process.env.PORT);
 console.log(`server is running on PORT: ${process.env.PORT}`);
-mongoose.connect(config.connectionString);
+mongoose.connect(process.env.DB_LINK);
 console.log("DB connected successfully..");
 
 module.exports = app;
