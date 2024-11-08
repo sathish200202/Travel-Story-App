@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import PasswordInput from "../../components/input/PasswordInput";
 import { validEmail } from "../../utils/helper";
 import axiosInstance from "../../utils/axiosInstance";
+import { red } from "@mui/material/colors";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -49,12 +50,19 @@ const Login = () => {
       }
     }
   };
+
+  const loginImage = {
+    backgroundColor: "red",
+  };
   return (
     <div className="h-screen bg-cyan-100 overflow-hidden relative">
       <div className="login-ui-box right-10 -top-40"></div>
       <div className="login-ui-box bg-cyan-300 right-1/2 -bottom-40"></div>
       <div className="container h-screen flex items-center justify-center px-20 mx-auto">
-        <div className="w-2/4 h-[90vh] flex items-end bg-login-bg-img bg-cover bg-center rounded-lg p-10 z-50">
+        <div
+          style={loginImage}
+          className="w-2/4 h-[90vh] flex items-end bg-login-bg-img bg-cover bg-center rounded-lg p-10 z-50"
+        >
           <div className="">
             <h1 className="text-5xl text-white font-thin leading-[58px] title-font">
               Capture Your <br /> Journeys

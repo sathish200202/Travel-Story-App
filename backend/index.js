@@ -15,9 +15,9 @@ app.use(cors({ origin: "*" }));
 app.use("/auth", UserRoute);
 app.use("/story", TravelStoryRoute);
 
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "dist", "index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "dist", "index.html"));
+// });
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/assets", express.static(path.join(__dirname, "assets")));
