@@ -18,8 +18,8 @@ app.use("/story", TravelStoryRoute);
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/assets", express.static(path.join(__dirname, "assets")));
 
-app.listen(8000);
-console.log("server is running on PORT: http://localhost:8000");
+app.listen(process.env.PORT);
+console.log(`server is running on PORT: ${process.env.PORT}`);
 mongoose.connect(config.connectionString);
 console.log("DB connected successfully..");
 
